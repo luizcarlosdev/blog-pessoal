@@ -77,25 +77,8 @@ header .social-button-header button {
     border: none;
 }
 
-/* 
-header .social-button-header:hover #btn-linkedin{
-    border: 2px solid rgb(0, 119, 255);
-} */
-
-/* header .social-button-header a button:hover #btn-facebook{
-    border: 5px solid rgb(84, 16, 156);
-} */
-
-header .social-button-header button:hover #linkedin {
-    color: rgb(0, 119, 255);
-}
-
-header .social-button-header button:hover #facebook {
-    color: rgb(84, 16, 156);
-}
-
-header .social-button-header button:hover #instagram {
-    color: rgb(187, 108, 121);
+header .social-button-header #btn-linkedin:hover{
+    border: blue !important;
 }
 
 header .social-button-header button i {
