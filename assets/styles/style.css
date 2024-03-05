@@ -133,13 +133,13 @@ header .menu-open i {
 }
 
 nav {
-    padding: 60px;
+    padding: 80px;
     z-index: 1;
     overflow: hidden;
     position: fixed;
     top: 0;
     right: 0;
-    width: 200px;
+    width: 330px;
     height: 100lvh;
     padding: 10px;
     color: #eee;
@@ -155,12 +155,17 @@ nav #nav-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     column-gap: 13px;
     border-bottom: 1px solid #eee;
     padding: 12px;
     padding-bottom: 20px;
     width: 100%;
+}
+
+nav #nav-header span{
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 nav #nav-body {
