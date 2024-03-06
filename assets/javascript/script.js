@@ -48,3 +48,32 @@ openUser.addEventListener("click", () => {
         nav_list_3.style.display = "none";
     }
 });
+
+function changeHeart() {
+    const heartIcon = document.querySelector("#icon-heart");
+    const btnHeart = document.querySelector("#icon-card button");
+    btnHeart.classList.toggle("heartBroken");
+    if (btnHeart.classList.contains("heartBroken")) {
+        heartIcon.className = "fa-solid fa-heart";
+    } else {
+        heartIcon.className = "fa-regular fa-heart";
+    }
+}
+
+const darkModeButton = document.querySelector("#dark-mode-btn");
+const msgDarkMode = document.querySelector("#msg-nav-list1");
+const main = document.querySelector("main");
+const body = document.body;
+darkModeButton.addEventListener("click", () => {
+    console.log("bfywea")
+    darkModeButton.classList.toggle("darMode");
+    if (darkModeButton.classList.contains("darkMode")) {
+        body.style.backgroundColor = "#1C1C1C"
+        main.style.backgroundColor = "#1C1C1C"
+        msgDarkMode.textContent = "Light Mode";
+    } else {
+        body.style.background = "#eee";
+        main.style.background = "#eee";
+        msgDarkMode.textContent = "Dark Mode";
+    }
+})
