@@ -116,7 +116,7 @@ header .menu-open i {
 }
 
 nav {
-    padding: 80px;
+    padding: 20px;
     z-index: 1;
     overflow: hidden;
     position: fixed;
@@ -135,6 +135,8 @@ nav #nav-all{
     display: grid;
     grid-template-columns: 1fr;
     place-items: left;
+    justify-content: center;
+    padding: 10px;
 }
 
 nav #nav-header {
@@ -144,13 +146,13 @@ nav #nav-header {
     justify-content: space-between;
     column-gap: 13px;
     border-bottom: 1px solid #eee;
-    padding: 12px;
+    padding: 18px;
     padding-bottom: 20px;
-    width: 100%;
+    width: 80%;
 }
 
 nav #nav-header span{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 
