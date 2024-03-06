@@ -213,6 +213,87 @@ nav .nav-special{
     justify-content: space-between;
 }
 
+nav #nav-options-list1{
+    display: none;
+    padding-left: 12px;
+}
+
+nav #nav-options-list1 button{
+    background-color: transparent;
+    border: none;
+}
+
+nav #nav-options-list1 i{
+    color: #eee;
+    font-size: 1.3rem;
+}
+
+nav #nav-options-list1 ul{
+    list-style: none;
+}
+
+nav #nav-options-list1 li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 11px;
+}
+
+nav #nav-options-list2{
+    display: none;
+    padding-left: 12px;
+}
+
+nav #nav-options-list2 button{
+    background-color: transparent;
+    border: none;
+}
+
+nav #nav-options-list2 i{
+    color: #eee;
+    font-size: 1.3rem;
+}
+
+nav #nav-options-list2 ul{
+    list-style: none;
+}
+
+nav #nav-options-list2 li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 11px;
+}
+
+nav #nav-options-list3{
+    display: none;
+    padding-left: 12px;
+}
+
+nav #nav-options-list3 button{
+    background-color: transparent;
+    border: none;
+}
+
+nav #nav-options-list3 i{
+    color: #eee;
+    font-size: 1.3rem;
+}
+
+nav #nav-options-list3 ul{
+    list-style: none;
+}
+
+nav #nav-options-list3 li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 11px;
+}
+
 aside.componente-header {
     height: 260px;
     width: 100%;
