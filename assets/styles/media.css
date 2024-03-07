@@ -1,4 +1,4 @@
-@media (max-width:720px) {
+@media (max-width:700px) {
     header{
         align-items: center;
         justify-content: space-between;
@@ -9,6 +9,7 @@
     header .social-header{
         display: none;
     }
+    
     main .news{
         grid-template-columns: 2fr;
         place-items: center;
@@ -36,10 +37,25 @@
     }
 }
 
+@media (min-width:768px) and (max-width:800px) {
+    header .menu-open{
+        display: none;
+    }
+    main .news{
+        grid-template-columns: 2fr;
+        place-items: center;
+        margin: auto;
+    }
+}
+
 @media (min-width:800px) and (max-width:1000px){
     main .news{
         grid-template-columns: 2fr 2fr;
         place-items: center;
+    }
+
+    header .menu-open{
+        display: none;
     }
 }
 
