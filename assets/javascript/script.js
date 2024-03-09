@@ -72,7 +72,39 @@ darkModeButton.addEventListener("click", () => {
     let textCardH2 = document.querySelectorAll(".news a");
     let th2 = [...textCardH2];
     let footerCard = [...document.querySelectorAll("#quant-views")];
+    let articleParagraph = [...document.querySelectorAll("article p")];
+    let tittleH1 = [...document.querySelectorAll("article h1")];
+    let tittleH2 = [...document.querySelectorAll("article h2")];
+    let tittleH3 = [...document.querySelectorAll("article h3")];
+    let tittleH4 = [...document.querySelectorAll("article h4")];
+    let tittleH5 = [...document.querySelectorAll("article h5")];
+    let tittleH6 = [...document.querySelectorAll("article h6")];
+    let heart = [...document.querySelectorAll(".icon-heart")];
     if (darkModeButton.classList.contains("changeMode")) {
+        heart.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH6.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH5.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH4.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH3.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH2.map((el) => {
+            el.style.color = "#eee"
+        })
+        tittleH1.map((el) => {
+            el.style.color = "#eee"
+        })
+        articleParagraph.map((el) => {
+            el.style.color = "#eee"
+        })
         footerCard.map((el) => {
             el.style.color = "#eee"
         })
@@ -90,6 +122,30 @@ darkModeButton.addEventListener("click", () => {
         icon.className = "fa-solid fa-sun";
         main.style.background = "#0d1117";
     } else {
+        heart.map((el) => {
+            el.style.color = "#f00"
+        })
+        tittleH6.map((el) => {
+            el.style.color = "#000"
+        })
+        tittleH5.map((el) => {
+            el.style.color = "#000"
+        })
+        tittleH4.map((el) => {
+            el.style.color = "#000"
+        })
+        tittleH3.map((el) => {
+            el.style.color = "#000"
+        })
+        tittleH2.map((el) => {
+            el.style.color = "#000"
+        })
+        tittleH1.map((el) => {
+            el.style.color = "#000"
+        })
+        articleParagraph.map((el) => {
+            el.style.color = "#000"
+        })
         footerCard.map((el) => {
             el.style.color = "#444"
         })

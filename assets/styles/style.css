@@ -330,10 +330,16 @@ main {
 
 main article {
     text-align: justify;
+    font-size: 18px;
     line-height: 2em;
+    margin-bottom: 17px;
 }
 
-main>article>img {
+main article h1,h2,h3,h4,h5,h6{
+    padding: 12px 0px;
+}
+
+main >article> img {
     width: 80%;
     object-fit: contain;
     display: block;
