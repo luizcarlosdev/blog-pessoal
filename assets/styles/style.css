@@ -224,6 +224,10 @@ nav .nav-special{
     justify-content: space-between;
 }
 
+/* nav .light-mode-btn{
+    display: none;
+} */
+
 nav #nav-options-list1{
     display: none;
     padding-left: 12px;
@@ -316,7 +320,7 @@ aside.componente-header {
 }
 
 main {
-    min-width: 350px;
+    min-width: 250px;
     max-width: 1200px;
     display: block;
     margin: auto;
@@ -405,6 +409,10 @@ div#text-card {
     padding: 5px;
     text-align: left;
     color: #444;
+}
+
+div#text-card h2{
+    padding-bottom: 7px;
 }
 
 div#text-card a {

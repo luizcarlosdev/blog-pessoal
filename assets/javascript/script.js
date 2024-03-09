@@ -60,20 +60,51 @@ function changeHeart() {
     }
 }
 
-const darkModeButton = document.querySelector("#dark-mode-btn");
-const msgDarkMode = document.querySelector("#msg-nav-list1");
-const main = document.querySelector("main");
-const body = document.body;
+let darkModeButton = document.querySelector("#dark-mode-btn");
+
 darkModeButton.addEventListener("click", () => {
-    console.log("bfywea")
-    darkModeButton.classList.toggle("darMode");
-    if (darkModeButton.classList.contains("darkMode")) {
-        body.style.backgroundColor = "#1C1C1C"
-        main.style.backgroundColor = "#1C1C1C"
-        msgDarkMode.textContent = "Light Mode";
+    darkModeButton.classList.toggle("changeMode");
+    let msg = document.querySelector("#msg-nav-list1");
+    let icon = document.querySelector("#icon-modes");
+    let main = document.querySelector("main");
+    let card = [...document.querySelectorAll(".cards")];
+    let textCard = [...document.querySelectorAll("#text-card")];
+    let textCardH2 = document.querySelectorAll(".news a");
+    let th2 = [...textCardH2];
+    let footerCard = [...document.querySelectorAll("#quant-views")];
+    if (darkModeButton.classList.contains("changeMode")) {
+        footerCard.map((el) => {
+            el.style.color = "#eee"
+        })
+        th2.map((element) => {
+            element.style.color = "#eee"
+        })
+        textCard.map((e) => {
+            e.style.color = "#eee"
+        })
+        card.map((el) => {
+            el.style.background = "#17181c";
+            el.style.color = "#eee";
+        })
+        msg.textContent = "Light Mode";
+        icon.className = "fa-solid fa-sun";
+        main.style.background = "#0d1117";
     } else {
-        body.style.background = "#eee";
-        main.style.background = "#eee";
-        msgDarkMode.textContent = "Dark Mode";
+        footerCard.map((el) => {
+            el.style.color = "#444"
+        })
+        th2.map((element) => {
+            element.style.color = "#444"
+        })
+        textCard.map((e) => {
+            e.style.color = "#444"
+        })
+        card.map((el) => {
+            el.style.background = "#fff";
+            el.style.color = "#444";
+        })
+        msg.textContent = "Dark Mode";
+        icon.className = "fa-solid fa-moon";
+        main.style.background = "#fff";
     }
 })
