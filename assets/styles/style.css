@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,11 +12,11 @@ body,
 html {
     width: 100%;
     height: 100lvh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 body {
-    background-color: snow;
+    background-color: #ffffff;
 }
 
 header {
@@ -228,6 +230,9 @@ nav .nav-special{
     display: none;
 } */
 
+nav .nav-marker{
+    font-size: 1.4rem;
+}
 nav #nav-options-list1{
     display: none;
     padding-left: 12px;
@@ -324,15 +329,27 @@ main {
     max-width: 1200px;
     display: block;
     margin: auto;
-    background-color: snow;
+    background-color: #ffffff;
     padding: 20px;
 }
 
-main article {
+main article p{
     text-align: justify;
     font-size: 18px;
     line-height: 2em;
+    text-indent: 30px;
     margin-bottom: 17px;
+}
+
+main article a{
+    color: #000000c0;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+main article a:hover{
+    color: dimgray;
 }
 
 main article h1,h2,h3,h4,h5,h6{
@@ -344,6 +361,15 @@ main >article> img {
     object-fit: contain;
     display: block;
     margin: 20px auto;
+}
+
+main span.description-image{
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin: 12px auto;
+    color: #444;
 }
 
 main .news {

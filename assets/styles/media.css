@@ -59,9 +59,9 @@
 
 @media (min-width:800px) and (max-width:1000px) {
     main .news {
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
         place-items: center;
-        column-gap: 12;
+        column-gap: 5px;
     }
 
     header .menu-open {
