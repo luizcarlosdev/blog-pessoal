@@ -23,10 +23,10 @@ openSettings.addEventListener("click", () => {
     openSettings.classList.toggle("openandclose1");
     if (openSettings.classList.contains("openandclose1")) {
         nav_list_1.style.display = "block";
-        navMarker1.textContent = `\u2B9D`;
+        navMarker1.textContent = `\u2227`;
     } else {
         nav_list_1.style.display = "none";
-        navMarker1.textContent = `\u2B9F`;
+        navMarker1.textContent = `\u2228`;
     }
 });
 
@@ -37,10 +37,10 @@ openCreate.addEventListener("click", () => {
     openCreate.classList.toggle("openandclose2");
     if (openCreate.classList.contains("openandclose2")) {
         nav_list_2.style.display = "block";
-        navMarker2.textContent = `\u2B9D`;
+        navMarker2.textContent = `\u2227`;
     } else {
         nav_list_2.style.display = "none";
-        navMarker2.textContent = `\u2B9F`;
+        navMarker2.textContent = `\u2228`;
     }
 });
 
@@ -51,16 +51,27 @@ openUser.addEventListener("click", () => {
     openUser.classList.toggle("bah");
     if (openUser.classList.contains("bah")) {
         nav_list_3.style.display = "block";
-        navMarker3.textContent = `\u2B9D`;
+        navMarker3.textContent = `\u2227`;
     } else {
         nav_list_3.style.display = "none";
-        navMarker3.textContent = `\u2B9F`;
+        navMarker3.textContent = `\u2228`;
     }
 });
 
 function changeHeart() {
     const heartIcon = document.querySelector("#icon-heart");
     const btnHeart = document.querySelector("#icon-card button");
+    btnHeart.classList.toggle("heartBroken");
+    if (btnHeart.classList.contains("heartBroken")) {
+        heartIcon.className = "fa-solid fa-heart";
+    } else {
+        heartIcon.className = "fa-regular fa-heart";
+    }
+}
+
+function changeHeart2() {
+    const heartIcon = document.querySelector("#icon-hear2t");
+    const btnHeart = document.querySelector("#icon-card2 button");
     btnHeart.classList.toggle("heartBroken");
     if (btnHeart.classList.contains("heartBroken")) {
         heartIcon.className = "fa-solid fa-heart";

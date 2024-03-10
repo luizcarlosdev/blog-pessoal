@@ -411,7 +411,8 @@ main .banner{
 main .notation{
     width: 350px;
     height: 100%;
-    border: 2px solid black;
+    box-shadow: 1px 1px 5px 0px #000c;
+    border-radius: 5px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -428,6 +429,8 @@ main .notation p{
     height: 300px;
     overflow: hidden;
     position: relative;
+    box-shadow: 1px 1px 10px 0px #000;
+    border-radius: 5px;
   }
   
   .slide {
