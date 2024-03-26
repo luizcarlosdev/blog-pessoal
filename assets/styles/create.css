@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+:root {
+    --color0: #f8f8f8;
+    --color1: #f1f1f1;
+    --color2: #90bba7;
+    --color3: #fffffd;
+    --color4: #3f4342;
+    --color5: #6d6e70;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    list-style-type: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.caixa1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color0);
+    position: relative;
+}
+
+div.caixa1-tudo {}
+
+/* div.caixa1 header{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+    padding: 10px;
+} */
+
+div.caixa1 form {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+    place-content: center;
+    row-gap: 10px;
+    width: 350px;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+
+div.caixa1 div.header-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 13px;
+    width: 100%;
+}
+
+div.caixa1 div.header-form span {
+    color: var(--color5);
+}
+
+div.caixa1 div.corpo-form {
+    display: grid;
+    place-items: center;
+    row-gap: 12px;
+}
+
+div.caixa1 div.corpo-form div.corpo-form-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+div.caixa1 div.corpo-form div.corpo-form-btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    box-shadow: 0px 0px 7px 0px #00000043;
+    height: 35px;
+    color: var(--color4);
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+div.caixa1 div.corpo-form div.or {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+div.caixa1 div.corpo-form div.or span {
+    text-align: center;
+}
+
+
+div.caixa1 div.corpo-form div.or::before {
+    content: " ";
+    flex: 1;
+    border: 1px solid #6d6e70;
+    margin-right: .5em;
+}
+
+div.caixa1 div.corpo-form div.or::after {
+    content: " ";
+    flex: 1;
+    border: 1px solid #6d6e70;
+    margin-left: .5em;
+}
+
+div.inputs-grupo {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+}
+
+div.input-caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 14px;
+}
+
+div.input-caixa label {
+    color: var(--color5);
+}
+
+div.input-caixa div.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0px 0px 3px 1px #00000039;
+    padding: 5px 12px;
+    background-color: #f1f1f1;
+}
+
+div.input-caixa div.input button {
+    width: 40px;
+    height: 100%;
+    background-color: transparent;
+}
+
+div.input-caixa div.input i {
+    font-size: 1.2rem;
+}
+
+div.input-caixa input:focus-visible~div.input {
+    border: 1px solid #000;
+}
+
+div.input-caixa div.input input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+}
+
+div.caixa1 div.formulario-botao {
+    width: 100%;
+    padding: 6px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+div.caixa1 div.formulario-botao input[type=button],
+input[type=submit] {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+div.caixa1 div.formulario-botao input[type=button],
+input[type=submit]:hover{
+    background-color: #0d0d0d;
+}
+
+div.caixa1 div.sem-conta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
+div.caixa1 div.sem-conta a {
+    color: var(--color4);
+    font-weight: 600;
+    margin: 0px 16px;
+}
+
+div.caixa2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color3);
+}
+
+div.caixa2 div.conteudo {
+    width: 200px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    row-gap: 10px;
+    margin: 0px 40px;
+}
+
+div.caixa2 div.conteudo div.citacao {
+    width: 100%;
+    text-wrap: wrap;
+    font-weight: 500;
+    line-height: 2em;
+}
+
+div.caixa2 div.conteudo div.avatar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 12px;
+    justify-content: flex-start;
+    vertical-align: middle;
+}
+
+div.caixa2 div.conteudo div.avatar-foto img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+@media (max-width:760px) {
+    div.caixa1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.caixa2 {
+        display: none;
+    }
+
+    div.caixa1 form {
+        width: 80%;
+        height: 100%;
+    }
+
+    div.caixa1 div.corpo-form div.or {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* div.caixa1 div.corpo-form div.or span::after {
+        width: 101px;
+    }
+
+    div.caixa1 div.corpo-form div.or span::before {
+        width: 100px;
+        transform: rotate(-180deg) translate(119px);
+    } */
+}
