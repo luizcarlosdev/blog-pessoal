@@ -11,7 +11,10 @@ body {
     width: 100%;
     display: grid;
     place-items: center;
-    background-color: blue;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     border-radius: 10px;
     /* Bordas arredondadas */
     box-shadow:
@@ -120,7 +123,7 @@ form #options #forgot a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
-    color: rgb(23, 96, 223);
+    color: #000000;
     text-align: center;
 }
 
@@ -131,7 +134,7 @@ form #options #button {
 form #options #button input[type=submit],
 input[type=button] {
     width: 100%;
-    background-color: rgb(23, 133, 223);
+    background-color:#000000;
     border: none;
     border-radius: 5px;
     color: #fff;
