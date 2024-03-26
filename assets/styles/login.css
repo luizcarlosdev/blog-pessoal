@@ -1,168 +1,231 @@
-*{
+@charset "UTF-8";
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body,html{
+body {
     height: 100vh;
     width: 100%;
     display: grid;
     place-items: center;
+    background-color: blue;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.5),
+        /* Sombra externa */
+        -8px -8px 15px rgba(255, 255, 255, 0.5);
+    /* Sombra interna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-form{
-    box-shadow: 1px 1px 10px 10px #00000031;
-    border-radius: 4px;
-    width: 300px;
-    height: auto;
-    padding: 12px;
-}
-
-form .header-form{
-    width: 100%;
+form {
     display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px 0px;
-    padding: 10px;
-}
-
-form .header-form > h1{
-    position: relative;
-}
-
-form .header-form > h1::after{
-    display: block;
-    position: absolute;
-    content: " ";
-    width: 130px;
-    height: 2px;
-    background-color: black;
-    margin: 6px 0px 0px;
-}
-
-form .header-form > .dark-theme button{
-    background-color: transparent;
-    border: none;
-}
-
-form .header-form > .dark-theme i{
-    font-size: 1.3rem;
-}
-
-form .social-form{
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
-    /* padding: 17px 0px; */
+    row-gap: 25px;
+    width: 450px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 45px 5px;
+}
+
+form #form-header {
     width: 100%;
-    margin: 15px 0px;
 }
 
-form .social-form ul{
-    list-style-type: none;
+form #form-header h1 {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-form .social-form li{
-    display: inline-block;
-}
-
-form .social-form img{
-    height:35px;
-    width: 35px;
-    object-fit: cover;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-form .place-form{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-form .space{
+form #inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 6px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+form #inputs .input {
+    width: 80%;
+    height: 40px;
+    /* border: 1px solid #999; */
+    box-shadow: 0px 0px 1.5px 2px #00000024;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+form #inputs .input #password-button {
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+form #inputs .input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+form #inputs .input input::placeholder {
+    color: #999;
+    font-size: 1rem;
+}
+
+form #inputs .input input,
+button {
+    padding: 10px 12px;
+}
+
+form #inputs .input button {
+    background-color: transparent;
+    border: none;
+    min-width: 60px;
+    min-height: 100%;
+}
+
+form #inputs .input i {
+    color: #999;
+    font-size: 1.1rem;
+}
+
+form #options {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+form #options #forgot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
 }
 
-form .fill-form{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 12px;
-    box-shadow: 0.5px 0.5px 5px 5px #00000017;
-    border-radius: 5px;
-    padding: 5px 15px;
-    width: 100%;
-    margin: 6px 0px;
-    font-size: 19px;
-}
-
-form .fill-form input{
-    border: none;
-    outline: none;
-    width: 100%;
-}
-
-form .forget-form{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-form .forget-form a{
+form #options #forgot a {
     text-decoration: none;
-    font-style: oblique;
-    font-size: 15px;
-    color: #444;
-    padding: 10px 0px;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(23, 96, 223);
+    text-align: center;
 }
 
-form .forget-form a:hover{
-    text-decoration: underline;
+form #options #button {
+    width: 100%;
 }
 
-form .button{
+form #options #button input[type=submit],
+input[type=button] {
+    width: 100%;
+    background-color: rgb(23, 133, 223);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form #options #create {
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+}
+
+form #options #create a {
+    color: rgb(23, 123, 223);
+    text-decoration: none;
+}
+
+form #anothers-options {
+    width: 100%;
     padding: 10px;
 }
 
-form .button a{
-    text-decoration: none;
-    color: #eee;
-}
-
-form .button input[type=submit]{
-    border: none;
-    border-radius: 5px;
-    background-color: #000;
-    color: #eee;
-    font-size: 1.3rem;
-    padding: 5px 10px;
+form #anothers-options #or {
     width: 100%;
-    height: 40px;
-    cursor: pointer;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-form .button input[type=submit]:hover{
-    background-color: #0d0d0d;
+form #anothers-options span {
+    position: relative;
+    display: inline;
+    margin: 0px 5px;
+}
+
+form #anothers-options span::after {
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background-color: #99999986;
+    position: absolute;
+    display: inline;
+    top: 50%;
+    margin-left: 5px;
+}
+
+form #anothers-options span::before {
+    content: " ";
+    width: 150px;
+    height: 1px;
+    background-color: #99999986;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 10%;
+    right: 100px;
+    transform: rotate(-180deg) translate(156px);
+    bottom: 0px;
+    margin-right: 5px !important;
+}
+
+form #social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+form #social button {
+    background-color: rgb(9, 43, 67);
+    height: 43px;
+    width: 43px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form #social button i {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+@media (max-width:768px) {
+    form {
+        width: 350px;
+    }
 }
