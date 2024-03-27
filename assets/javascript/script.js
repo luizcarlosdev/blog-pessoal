@@ -370,27 +370,3 @@ darkModeButton.addEventListener("click", () => {
 
 })
 
-let slides = document.querySelectorAll('.slide');
-let current = 0;
-
-function slider() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-    }
-    slides[current].classList.add('active');
-}
-
-function nextSlide() {
-    current = (current != slides.length - 1) ? current + 1 : 0;
-    slider();
-}
-
-function prevSlide() {
-    current = (current != 0) ? current - 1 : slides.length - 1;
-    slider();
-}
-
-document.getElementById('next').addEventListener('click', nextSlide);
-document.getElementById('prev').addEventListener('click', prevSlide);
-
-setInterval(nextSlide, 5000);

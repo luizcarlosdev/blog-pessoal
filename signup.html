@@ -42,15 +42,21 @@
                     <div class="inputs-grupo">
                         <div class="input-caixa">
                             <label for="f_email">Email</label>
-                            <div class="input">
-                                <input type="email" name="" id="f_email" placeholder="Your email">
+                            <div class="error">
+                                <div class="input">
+                                    <input type="email" name="" id="f_email" placeholder="Your email" autocomplete="email">
+                                </div>
+                                <div class="msg-error"><p>Não há caractéres suficientes para prosseguir a ação</p></div>
                             </div>
                         </div>
                         <div class="input-caixa">
                             <label for="f_password">Password</label>
-                            <div class="input">
-                                <input id="input-password" type="password" name="" id="f_password" placeholder="Your password">
-                                <button id="btn-sign-up"><i id="icons-eye-sig-up" class="fa-regular fa-eye-slash"></i></button>
+                            <div class="error">
+                                <div class="input">
+                                    <input id="input-password" type="password" name="" id="f_password" placeholder="Your password" autocomplete="new-password" maxlength="15">
+                                    <button id="btn-sign-up"><i id="icons-eye-sig-up" class="fa-regular fa-eye-slash"></i></button>
+                                </div>
+                                <div class="msg-error"><p>Não há caractéres suficientes para prosseguir a ação</p></div>
                             </div>
                         </div>
                     </div>
