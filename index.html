@@ -7,6 +7,7 @@
     <title>Escritos Seletos</title>
     <link rel="shortcut icon" href="favicon_io/favicon-32x32.png" type="image/x-icon">
     <script src="assets/javascript/script.js" defer></script>
+    <script src="assets/javascript/create.js" defer></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.5.1-web/css/all.min.css">
@@ -24,11 +25,16 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Projects</a></li>
             <li id="list-dark"><a href="#">Services</a><span id="chave-header">&#8744;</span>
-            <div id="block-options" class="block-options">
-                <ul>
-                    <li id="listAllDark"><div id="block-options-icon" class="block-options-icon"><i class="fa-solid fa-moon"></i></div><div id="block-options-text" class="block-options-text">Dark Mode</div></li>
-                </ul>
-            </div></li>
+                <div id="block-options" class="block-options">
+                    <ul>
+                        <li id="listAllDark">
+                            <div id="block-options-icon" class="block-options-icon"><i class="fa-solid fa-moon"></i>
+                            </div>
+                            <div id="block-options-text" class="block-options-text">Dark Mode</div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </div>
 
         <div class="social-header">
@@ -53,6 +59,18 @@
         <div id="nav-all">
             <div id="nav-header">
                 <h2>Escritos Seletos</h2>
+                <div id="user-login-main">
+                    <div id="user-login-main-avatar"><img src="assets/images/avatar.jpg" alt=""></div>
+                    <div id="user-login-main-information">
+                        <div id="user-login-main-name">
+                            <span>João</span>
+                        </div>
+
+                        <div id="user-login-main-time">
+                            <span>16:00</span>
+                        </div>
+                    </div>
+                </div>
                 <span onclick="closeMenu()">&#9776</span>
             </div>
             <div id="nav-body">
@@ -98,16 +116,18 @@
                 </div>
                 <div class="nav-lists" id="nav-options-list3">
                     <ul>
-                        <a href="login.html">
+                        <a href="./signup.html">
                             <li>
                                 <button id="nav-list-button3"><i class="fa-solid fa-user-plus"></i></button>
                                 <span id="msg-nav-list3">Sign Up</span>
                             </li>
                         </a>
-                        <li>
-                            <button id="nav-list-button3"><i class="fa-solid fa-user"></i></button>
-                            <span id="msg-nav-list3">Sign In</span>
-                        </li>
+                        <a href="./login.html">
+                            <li>
+                                <button id="nav-list-button3"><i class="fa-solid fa-user"></i></button>
+                                <span id="msg-nav-list3">Sign In</span>
+                            </li>
+                        </a>
                     </ul>
                 </div>
                 <li><a href=""><span><i class="fa-solid fa-box-archive"></i></span>Products</a></li>
@@ -118,32 +138,6 @@
     <aside class="componente-header">
     </aside>
     <main>
-        <section class="banner">
-            <div class="slider" id="slider">
-                <a href="">
-                    <div class="slide active">
-                        <img src="assets/images/img-mon-coeur.jpg">
-                    </div>
-                </a>
-                <a href="">
-                    <div class="slide">
-                        <img src="assets/images/fiodor-dostoievski-l.jpg">
-                    </div>
-                </a>
-                <a href="">
-                    <div class="slide">
-                        <img src="assets/images/noticias_sigmund-freud-gb0c92b218_1920.jpg">
-                    </div>
-                </a>
-                <button class="arrow left" id="prev">←</button>
-                <button class="arrow right" id="next">→</button>
-            </div>
-
-            <div class="notation">
-                <h1>Meu artigo</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minima, natus recusandae eius ab doloremque tenetur hic alias eligendi ullam. Porro quam consequatur aut ex obcaecati reiciendis, ab optio illo?</p>
-            </div>
-        </section>
         <article>
             <h1>Meus Artigos</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, commodi corporis. Sit harum nobis natus

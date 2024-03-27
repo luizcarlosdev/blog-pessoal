@@ -43,9 +43,9 @@ header .links-header li {
     display: block;
 } */
 
-header .links-header .block-options{
+header .links-header .block-options {
     display: none;
-    position:absolute;
+    position: absolute;
     text-align: center;
     padding-top: 5px;
     background-color: #000;
@@ -58,7 +58,7 @@ header .links-header .block-options{
     transition: all 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
-header .links-header .block-options li{
+header .links-header .block-options li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,7 +80,7 @@ header .links-header a:hover {
     text-shadow: 0px 1px 2px #eee;
 }
 
-header .links-header #chave-header{
+header .links-header #chave-header {
     color: #444;
     margin-left: 6px;
 }
@@ -112,7 +112,7 @@ header .social-button-header button {
     border: none;
 }
 
-header .social-button-header #btn-linkedin:hover{
+header .social-button-header #btn-linkedin:hover {
     border: blue !important;
 }
 
@@ -164,7 +164,7 @@ nav {
     display: none;
 }
 
-nav #nav-all{
+nav #nav-all {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -186,13 +186,40 @@ nav #nav-header {
     width: 100%;
 }
 
-nav #nav-header span{
+nav #nav-header div#user-login-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+    display: none;
+}
+
+nav #nav-header div#user-login-main img{
+    height: 45px;
+}
+
+nav #nav-header div#user-login-main div#user-login-main-information{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+nav #nav-header div#user-login-main div#user-login-main-name span{
+    font-size: 1rem;
+}
+
+nav #nav-header div#user-login-main div#user-login-main-time span{
+    font-size: 0.97rem;
+}
+
+nav #nav-header span {
     font-size: 1.4rem;
     font-weight: 600;
     cursor: pointer;
 }
 
-nav #nav-header::after{
+nav #nav-header::after {
     content: " ";
     width: 80%;
     height: 0.5px;
@@ -209,7 +236,7 @@ nav #nav-body {
     padding-top: 16px;
 }
 
-nav .nav-marker{
+nav .nav-marker {
     position: absolute;
     right: 15px;
     /* margin-left: 26px; */
@@ -235,15 +262,18 @@ nav li {
     width: 220px;
     border-radius: 5px;
     cursor: pointer;
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)/*cubic-bezier(0.165, 0.84, 0.44, 1)*/;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+        /*cubic-bezier(0.165, 0.84, 0.44, 1)*/
+    ;
     transition-duration: 2s;
 }
 
-nav li:hover:not(.nav-lists li){
+nav li:hover:not(.nav-lists li) {
     background-color: rgb(0, 102, 255);
 }
 
-nav a,.nav-block{
+nav a,
+.nav-block {
     text-decoration: none;
     color: #eee;
     display: flex;
@@ -253,7 +283,7 @@ nav a,.nav-block{
     column-gap: 10px;
 }
 
-nav .nav-special{
+nav .nav-special {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -263,29 +293,30 @@ nav .nav-special{
     display: none;
 } */
 
-nav .nav-marker{
+nav .nav-marker {
     font-size: 1.4rem;
 }
-nav #nav-options-list1{
+
+nav #nav-options-list1 {
     display: none;
     padding-left: 12px;
 }
 
-nav #nav-options-list1 button{
+nav #nav-options-list1 button {
     background-color: transparent;
     border: none;
 }
 
-nav #nav-options-list1 i{
+nav #nav-options-list1 i {
     color: #eee;
     font-size: 1.3rem;
 }
 
-nav #nav-options-list1 ul{
+nav #nav-options-list1 ul {
     list-style: none;
 }
 
-nav #nav-options-list1 li{
+nav #nav-options-list1 li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -293,26 +324,26 @@ nav #nav-options-list1 li{
     column-gap: 11px;
 }
 
-nav #nav-options-list2{
+nav #nav-options-list2 {
     display: none;
     padding-left: 12px;
 }
 
-nav #nav-options-list2 button{
+nav #nav-options-list2 button {
     background-color: transparent;
     border: none;
 }
 
-nav #nav-options-list2 i{
+nav #nav-options-list2 i {
     color: #eee;
     font-size: 1.3rem;
 }
 
-nav #nav-options-list2 ul{
+nav #nav-options-list2 ul {
     list-style: none;
 }
 
-nav #nav-options-list2 li{
+nav #nav-options-list2 li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -320,26 +351,26 @@ nav #nav-options-list2 li{
     column-gap: 11px;
 }
 
-nav #nav-options-list3{
+nav #nav-options-list3 {
     display: none;
     padding-left: 12px;
 }
 
-nav #nav-options-list3 button{
+nav #nav-options-list3 button {
     background-color: transparent;
     border: none;
 }
 
-nav #nav-options-list3 i{
+nav #nav-options-list3 i {
     color: #eee;
     font-size: 1.3rem;
 }
 
-nav #nav-options-list3 ul{
+nav #nav-options-list3 ul {
     list-style: none;
 }
 
-nav #nav-options-list3 li{
+nav #nav-options-list3 li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -367,11 +398,11 @@ main {
     padding: 17px;
 }
 
-main article{
+main article {
     padding: 15px;
 }
 
-main article p{
+main article p {
     text-align: justify;
     font-size: 18px;
     line-height: 2em;
@@ -379,36 +410,41 @@ main article p{
     margin-bottom: 17px;
 }
 
-main article a{
+main article a {
     color: #000000c0;
     text-decoration: underline;
     font-weight: bold;
     font-style: italic;
 }
 
-main article a:hover{
+main article a:hover {
     color: dimgray;
 }
 
-main article h1,h2,h3,h4,h5,h6{
+main article h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     padding: 12px 0px;
 }
 
-main >article> img {
+main>article>img {
     width: 80%;
     object-fit: contain;
     display: block;
     margin: 20px auto;
 }
 
-main .banner{
+main .banner {
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
     place-items: center;
 }
 
-main .notation{
+main .notation {
     width: 350px;
     height: 100%;
     box-shadow: 1px 1px 5px 0px #000c;
@@ -419,7 +455,7 @@ main .notation{
     row-gap: 20px;
 }
 
-main .notation p{
+main .notation p {
     font-weight: 600;
     color: #000;
 }
@@ -431,26 +467,26 @@ main .notation p{
     position: relative;
     box-shadow: 1px 1px 10px 0px #000;
     border-radius: 5px;
-  }
-  
-  .slide {
+}
+
+.slide {
     display: none;
     width: 100%;
     height: 300px;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .slide img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  
-  .slide.active {
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
     display: block;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     position: absolute;
     top: 50%;
     /* transform: translateY(-50%); */
@@ -458,17 +494,17 @@ main .notation p{
     border: none;
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .arrow.left {
-    left: 10px;
-  }
-  
-  .arrow.right {
-    right: 10px;
-  }
+}
 
-main span.description-image{
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+main span.description-image {
     text-align: center;
     font-size: 12px;
     font-style: italic;
@@ -548,7 +584,7 @@ div#text-card {
     color: #444;
 }
 
-div#text-card h2{
+div#text-card h2 {
     padding-bottom: 7px;
 }
 
@@ -583,7 +619,7 @@ div#quant-views {
     color: #444;
 }
 
-div#icon-card button{
+div#icon-card button {
     border: none;
     background-color: transparent;
 }
@@ -611,7 +647,7 @@ footer {
     /* padding-top: 10px; */
 }
 
-#socials-in-footer{
+#socials-in-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -627,7 +663,7 @@ footer {
     object-fit: contain;
 }
 
-#socials-in-footer i{
+#socials-in-footer i {
     color: #fff;
     font-size: 1.7rem;
 }
