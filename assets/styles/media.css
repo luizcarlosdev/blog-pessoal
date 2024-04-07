@@ -12,7 +12,7 @@
         display: none;
     }
 
-    main .banner{
+    main .banner {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
@@ -23,17 +23,17 @@
     .slider {
         width: 300px;
         height: 200px;
-      }
-    
-      .slide {
-        height: 200px;
-      }
-    
-      .arrow {
-        padding: 5px;
-      }
+    }
 
-    main .notation{
+    .slide {
+        height: 200px;
+    }
+
+    .arrow {
+        padding: 5px;
+    }
+
+    main .notation {
         width: 300px;
     }
 
@@ -44,23 +44,24 @@
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: left;
+        row-gap: 15px;
     }
 
-    #social-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        row-gap: 26px;
-    }
-
-    #services-footer {
+    footer div.footer-main {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        row-gap: 5px;
+        justify-content: flex-start;
+        row-gap: 18px;
+    }
+
+    footer div.footer-information-second-part {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }
 
@@ -69,14 +70,14 @@
         display: none !important;
     }
 
-    main .banner{
+    main .banner {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
         place-items: center;
         padding: 20px;
     }
-    
+
 
 }
 
@@ -91,7 +92,7 @@
         margin: auto;
     }
 
-    main .banner{
+    main .banner {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
@@ -112,7 +113,7 @@
         column-gap: 5px;
     }
 
-    main .banner{
+    main .banner {
         display: grid;
         grid-template-columns: 1fr 1fr;
         place-items: center;
@@ -122,9 +123,9 @@
     .slider {
         width: 350px;
         height: 100%;
-      }
+    }
 
-    
+
     header .menu-open {
         display: none;
     }

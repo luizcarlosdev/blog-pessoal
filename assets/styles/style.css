@@ -13,15 +13,20 @@ html {
     width: 100%;
     height: 100lvh;
     font-family: "Sofia Sans", sans-serif;
+    color: var(--text-color);
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--background-main);
 }
 
 html {
     --buttonfooter: #7734bd;
     --background-blog: #171717;
+    --background-main: #ffffff;
+    --text-color: #0d0d0d;
+    --color-buttons: #0066ff;
+    --grey-universe: #888888;
 }
 
 header {
@@ -74,7 +79,7 @@ header .links-header .block-options li {
 
 header .links-header a {
     text-decoration: none;
-    color: #444;
+    color: var(--grey-universe);
     font-size: 1.1rem;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -117,10 +122,6 @@ header .social-button-header button {
     border: none;
 }
 
-header .social-button-header #btn-linkedin:hover {
-    border: blue !important;
-}
-
 header .social-button-header button i {
     color: #eee;
     font-size: 1.3rem;
@@ -129,7 +130,7 @@ header .social-button-header button i {
 header .login-header button {
     border: none;
     border-radius: 3px;
-    background-color: rgb(0, 102, 255);
+    background-color: var(--color-buttons);
     padding: 3px 20px;
     text-align: center;
     font-size: 1rem;
@@ -274,7 +275,7 @@ nav li {
 }
 
 nav li:hover:not(.nav-lists li) {
-    background-color: rgb(0, 102, 255);
+    background-color: var(--color-buttons);
 }
 
 nav a,
@@ -399,7 +400,7 @@ main {
     max-width: 1200px;
     display: block;
     margin: auto;
-    background-color: #ffffff;
+    background-color: var(--background-main);
     padding: 17px;
 }
 
@@ -435,12 +436,6 @@ h6 {
     padding: 12px 0px;
 }
 
-main>article>img {
-    width: 80%;
-    object-fit: contain;
-    display: block;
-    margin: 20px auto;
-}
 
 main .banner {
     width: 100%;
@@ -449,20 +444,29 @@ main .banner {
     place-items: center;
 }
 
-main .notation {
-    width: 350px;
-    height: 100%;
-    box-shadow: 1px 1px 5px 0px #000c;
-    border-radius: 5px;
-    padding: 30px;
+main picture {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-main .notation p {
-    font-weight: 600;
-    color: #000;
+main picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+}
+
+main .notation {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2px 0px 12px 0px;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .slider {
@@ -634,73 +638,111 @@ div#icon-card i {
     color: red;
 }
 
-
-
-
-/* 
 footer {
-    padding: 40px;
     width: 100%;
-    background-color: #0D0D0D;
-    color: #fff;
+    background-color: var(--background-blog);
+    color: #ffffff;
     display: flex;
+    padding: 20px;
     flex-direction: column;
-    row-gap: 30px;
-}
-
-#social-footer {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 10px; 
+    justify-content: center;
 }
 
-#socials-in-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    column-gap: 12px;
-}
-
-#socials-in-footer img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    padding-right: 6px;
-    object-fit: contain;
-}
-
-#socials-in-footer i {
-    color: #fff;
-    font-size: 1.7rem;
-}
-
-#services-footer {
-    padding-top: 20px;
+footer div.footer-main {
     display: grid;
-    place-items: center;
-    align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    padding: 20px;
 }
 
-#services-footer ul {
+footer div.footer-information {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+footer div.footer-social-images {
+    display: flex;
+    column-gap: 18px;
+}
+
+
+footer div.footer-social-images img {
+    height: 40px;
+}
+
+footer div.footer-services {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+    row-gap: 10px;
+}
+
+footer div.footer-services ul {
     list-style-type: none;
-    padding: 10px;
 }
 
-#services-footer a {
+footer div.footer-services a {
     text-decoration: none;
-    color: #444;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    color: #888;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-#services-footer a:hover {
-    color: #eee;
+footer div.footer-services a:hover {
+    color: #ddd;
 }
 
-#services-footer li {
-    padding-bottom: 9px;
-} */
+footer div.footer-services li {
+    margin-bottom: 11px;
+}
+
+footer div.footer-send-email {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+    row-gap: 25px;
+}
+
+footer div.footer-send-email div.footer-input-email {
+    border-radius: 5px;
+    height: 30px;
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #0d0d0d;
+    overflow: hidden;
+}
+
+footer div.footer-send-email div.footer-input-email input {
+    height: 100%;
+    width: 100%;
+    padding: 0px 10px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+footer div.footer-send-email div.footer-input-email button {
+    height: 100%;
+    width: 40px;
+    vertical-align: bottom;
+    background-color: var(--buttonfooter);
+    border: none;
+    cursor: pointer;
+}
+
+footer div.footer-send-email div.footer-input-email button i {
+    color: #ffffff;
+}
+
+footer div.footer-information-second-part {
+    display: flex;
+    padding: 8px;
+    padding-left: 15px;
+    align-items: center;
+    justify-content: center;
+}
