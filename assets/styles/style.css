@@ -8,6 +8,39 @@
     box-sizing: border-box;
 }
 
+.modeLight {
+    --link-color: #000000c0;
+    --card-bg: #fff;
+    --card-color-footer:#444;
+    --card-text-color: #000;
+    --tittle-color: #000;
+    --text-color-main: #000;
+    --background-color-body: #fff;
+    --buttonfooter: #7734bd;
+    --background-footer: #171717;
+    --background-main: #ffffff;
+    --text-color: #0d0d0d;
+    --color-buttons: #0066ff;
+    --grey-universe: #888888;
+    --tittle-color-footer: #fff
+}
+
+.modeDark {
+    --link-color: #fff;
+    --card-bg: #17181c;
+    --card-color-footer:#eee;
+    --card-text-color: #fff;
+    --tittle-color: #eee;
+    --text-color-main: #ddd;
+    --background-color-body: #08090D;
+    --buttonfooter: #7734bd;
+    --background-footer: #171717;
+    --background-main: #08090D;
+    --text-color: #0d0d0d;
+    --color-buttons: #0066ff;
+    --grey-universe: #888888;
+}
+
 body,
 html {
     width: 100%;
@@ -20,18 +53,9 @@ body {
     background-color: var(--background-main);
 }
 
-html {
-    --buttonfooter: #7734bd;
-    --background-blog: #171717;
-    --background-main: #ffffff;
-    --text-color: #0d0d0d;
-    --color-buttons: #0066ff;
-    --grey-universe: #888888;
-}
-
 header {
     width: 100%;
-    background-color: var(--background-blog);
+    background-color: var(--background-footer);
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -142,8 +166,9 @@ header .login-header button {
 }
 
 header .login-header button:hover {
-    background-color: #ddd;
-    color: #000000c0;
+    background-color: #7734bd;
+    color: #fff;
+    cursor: pointer;
 }
 
 header .menu-open button {
@@ -414,10 +439,11 @@ main article p {
     line-height: 2em;
     text-indent: 30px;
     margin-bottom: 17px;
+    color: var(--text-color-main);
 }
 
 main article a {
-    color: #000000c0;
+    color: var(--link-color);
     text-decoration: underline;
     font-weight: bold;
     font-style: italic;
@@ -469,50 +495,6 @@ main .notation {
     font-style: italic;
 }
 
-.slider {
-    width: 550px;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 1px 1px 10px 0px #000;
-    border-radius: 5px;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-    height: 300px;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide.active {
-    display: block;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    /* transform: translateY(-50%); */
-    background: #ffffff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.arrow.left {
-    left: 10px;
-}
-
-.arrow.right {
-    right: 10px;
-}
-
 main span.description-image {
     text-align: center;
     font-size: 12px;
@@ -537,8 +519,12 @@ div.cards {
     flex-direction: column;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--card-bg);
 }
+
+/* div.cards h1,h2,h3,h4,h5,h6 {
+    color: var(--tittle-color);
+} */
 
 div#card-image {
     width: 100%;
@@ -575,6 +561,14 @@ div#perfil-card {
     column-gap: 5px;
 }
 
+div#perfil-card {
+    color: var(--card-text-color);
+}
+
+div#option-card span {
+    color: var(--card-text-color);
+}
+
 div#post {
     font-size: 12px;
 }
@@ -590,7 +584,7 @@ div#text-card {
     width: 100%;
     padding: 5px;
     text-align: left;
-    color: #444;
+    color: var(--card-text-color);
 }
 
 div#text-card h2 {
@@ -599,7 +593,7 @@ div#text-card h2 {
 
 div#text-card a {
     text-decoration: none;
-    color: #444;
+    color: var(--card-color-footer);
     margin-bottom: 3px;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -625,7 +619,7 @@ div#quant-views {
     align-items: center;
     justify-content: space-between;
     column-gap: 15px;
-    color: #444;
+    color: var(--card-color-footer);
 }
 
 div#icon-card button {
@@ -640,13 +634,17 @@ div#icon-card i {
 
 footer {
     width: 100%;
-    background-color: var(--background-blog);
+    background-color: var(--background-footer);
     color: #ffffff;
     display: flex;
     padding: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+footer h1,h2,h3,h4,h5,h6 {
+    color: var(--tittle-color-footer);
 }
 
 footer div.footer-main {
