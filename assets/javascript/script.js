@@ -91,5 +91,20 @@ listDarkTheme.addEventListener("click", () => {
   }
 });
 
-let darkModeButton = document.querySelector("#dark-mode-btn");
+const darkModeButton = document.querySelector("#dark-mode-btn");
 
+const body = document.body;
+body.setAttribute("class", "modeLight");
+
+function modeDarkChange() {
+  darkModeButton.classList.toggle("extendsMode");
+  if (darkModeButton.classList.contains("extendsMode")) {
+    body.removeAttribute("class", "modeLight");
+    body.setAttribute("class", "modeDark");
+  } else {
+    body.removeAttribute("class", "modeDark");
+    body.setAttribute("class", "modeLight");
+  }
+}
+
+darkModeButton.addEventListener("click", modeDarkChange);

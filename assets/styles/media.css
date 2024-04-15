@@ -12,6 +12,11 @@
         display: none;
     }
 
+    section#apresentacion-blog-banner {
+        background-position: center left;
+        height: 250px;
+    }
+
     main .banner {
         display: grid;
         grid-template-columns: 1fr;
@@ -44,25 +49,30 @@
     }
 
     footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: left;
-        row-gap: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
-    footer div.footer-main {
+    footer div#footer-header {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        row-gap: 18px;
+        row-gap: 20px;
     }
 
-    footer div.footer-information-second-part {
+    footer div#footer-content-lists {
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
     }
+
+    footer div#footer-content-lists div#footer-list-options ul {
+        margin: 12px 0px;
+    }
+
 }
 
 @media (min-width:814px) and (max-width:795px) {
@@ -77,8 +87,6 @@
         place-items: center;
         padding: 20px;
     }
-
-
 }
 
 @media (min-width:768px) and (max-width:800px) {

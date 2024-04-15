@@ -11,34 +11,36 @@
 .modeLight {
     --link-color: #000000c0;
     --card-bg: #fff;
-    --card-color-footer:#444;
-    --card-text-color: #000;
+    --card-color-footer: #444;
+    --card-text-color: #00099;
     --tittle-color: #000;
     --text-color-main: #000;
     --background-color-body: #fff;
     --buttonfooter: #7734bd;
     --background-footer: #171717;
     --background-main: #ffffff;
-    --text-color: #0d0d0d;
+    --text-color: ##7A7A7A;
     --color-buttons: #0066ff;
     --grey-universe: #888888;
-    --tittle-color-footer: #fff
+    --tittle-color-footer: #fff;
+    --picture-description-color: #171717;
 }
 
 .modeDark {
     --link-color: #fff;
     --card-bg: #17181c;
-    --card-color-footer:#eee;
+    --card-color-footer: #eee;
     --card-text-color: #fff;
     --tittle-color: #eee;
-    --text-color-main: #ddd;
-    --background-color-body: #08090D;
+    --text-color-main: #eee;
+    --background-color-body: #17181A;
     --buttonfooter: #7734bd;
     --background-footer: #171717;
-    --background-main: #08090D;
+    --background-main: #17181A;
     --text-color: #0d0d0d;
     --color-buttons: #0066ff;
     --grey-universe: #888888;
+    --picture-description-color: #ccc;
 }
 
 body,
@@ -51,6 +53,10 @@ html {
 
 body {
     background-color: var(--background-main);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -182,7 +188,7 @@ header .menu-open i {
 }
 
 nav {
-    z-index: 1;
+    z-index: 3;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -209,39 +215,52 @@ nav #nav-header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    vertical-align: middle;
     justify-content: space-between;
     column-gap: 13px;
     /* border-bottom: 1px solid #eee; */
-    padding: 12px;
+    padding: 10px;
     padding-bottom: 30px;
     width: 100%;
 }
 
-nav #nav-header div#user-login-main {
+nav div#nav-user-logout {
     display: flex;
     flex-direction: row;
     align-items: center;
+    column-gap: 20px;
     justify-content: center;
-    column-gap: 6px;
-    display: none;
 }
 
-nav #nav-header div#user-login-main img {
-    height: 45px;
-}
-
-nav #nav-header div#user-login-main div#user-login-main-information {
+nav div#nav-user-logout div#nav-user-logout-photo {
     display: flex;
     flex-direction: column;
-    row-gap: 7px;
+    row-gap: 12px;
 }
 
-nav #nav-header div#user-login-main div#user-login-main-name span {
-    font-size: 1rem;
+nav div#nav-user-logout div#nav-user-logout-photo img {
+    height: 35px;
+    width: 35px;
 }
 
-nav #nav-header div#user-login-main div#user-login-main-time span {
-    font-size: 0.97rem;
+nav #nav-user-logout-photo-function p {
+    font-size: 13px;
+}
+
+nav #nav-user-logout-username {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+}
+
+nav #nav-user-logout-username #nav-user-logout-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+nav #nav-user-logout-username #nav-user-logout-number-inscription {
+    font-size: 15px;
 }
 
 nav #nav-header span {
@@ -408,7 +427,7 @@ nav #nav-options-list3 li {
     justify-content: flex-start;
     column-gap: 11px;
 }
-
+/* 
 aside.componente-header {
     position: relative;
     height: 260px;
@@ -418,6 +437,17 @@ aside.componente-header {
     background-size: cover;
     background-attachment: fixed;
     background-position: top top;
+} */
+
+section#apresentacion-blog-banner {
+    height: 450px;
+    width: 100%;
+    background-image: url(../images/section-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #0d0d0d;
 }
 
 main {
@@ -429,16 +459,18 @@ main {
     padding: 17px;
 }
 
-main article {
+/* main article {
     padding: 15px;
-}
+} */
 
-main article p {
+main article {
+    font-family: "Inter", sans-serif;
     text-align: justify;
     font-size: 18px;
     line-height: 2em;
     text-indent: 30px;
     margin-bottom: 17px;
+    padding: 15px;
     color: var(--text-color-main);
 }
 
@@ -453,13 +485,14 @@ main article a:hover {
     color: dimgray;
 }
 
-main article h1,
+main article > h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
     padding: 12px 0px;
+    color: var(--tittle-color);
 }
 
 
@@ -487,11 +520,13 @@ main picture img {
 }
 
 main .notation {
+    color: var(--picture-description-color);
     width: 100%;
     height: 100%;
     text-align: center;
     padding: 2px 0px 12px 0px;
     font-weight: 400;
+    font-size: 14px;
     font-style: italic;
 }
 
@@ -520,6 +555,12 @@ div.cards {
     align-items: center;
     flex-direction: column;
     background-color: var(--card-bg);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+div.cards:hover {
+    box-shadow: 0px 0px 12px 3px rgba(4, 27, 52, 0.36);
 }
 
 /* div.cards h1,h2,h3,h4,h5,h6 {
@@ -633,114 +674,73 @@ div#icon-card i {
 }
 
 footer {
-    width: 100%;
-    background-color: var(--background-footer);
-    color: #ffffff;
+    position: relative;
     display: flex;
-    padding: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: 35px;
+    width: 100%;
+    padding: 40px;
+    color: #ffffff;
+    background-color: var(--background-footer);
 }
 
 footer h1,h2,h3,h4,h5,h6 {
     color: var(--tittle-color-footer);
 }
 
-footer div.footer-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    place-items: center;
-    padding: 20px;
-}
-
-footer div.footer-information {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-}
-
-footer div.footer-social-images {
+footer div#footer-header {
+    width: 100%;
     display: flex;
-    column-gap: 18px;
+    align-items: center;
+    justify-content: space-around;
 }
 
-
-footer div.footer-social-images img {
-    height: 40px;
+footer div#footer-header div#footer-header-tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-footer div.footer-services {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: left;
-    row-gap: 10px;
-}
-
-footer div.footer-services ul {
-    list-style-type: none;
-}
-
-footer div.footer-services a {
-    text-decoration: none;
-    color: #888;
-    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-footer div.footer-services a:hover {
-    color: #ddd;
-}
-
-footer div.footer-services li {
-    margin-bottom: 11px;
-}
-
-footer div.footer-send-email {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: left;
-    row-gap: 25px;
-}
-
-footer div.footer-send-email div.footer-input-email {
-    border-radius: 5px;
-    height: 30px;
-    width: 230px;
+footer div#footer-header div#footer-header-social-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    background-color: #0d0d0d;
-    overflow: hidden;
-}
-
-footer div.footer-send-email div.footer-input-email input {
-    height: 100%;
-    width: 100%;
-    padding: 0px 10px;
-    color: #ffffff;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-footer div.footer-send-email div.footer-input-email button {
-    height: 100%;
-    width: 40px;
-    vertical-align: bottom;
-    background-color: var(--buttonfooter);
-    border: none;
-    cursor: pointer;
-}
-
-footer div.footer-send-email div.footer-input-email button i {
-    color: #ffffff;
-}
-
-footer div.footer-information-second-part {
-    display: flex;
-    padding: 8px;
-    padding-left: 15px;
-    align-items: center;
     justify-content: center;
+    column-gap: 20px;
+}
+
+footer div#footer-header div#footer-header-social-icons img {
+    width: 40px;
+}
+
+footer div#footer-content-lists {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+}
+
+footer div#footer-content-lists div#footer-list-options ul {
+    list-style-type: none;
+}
+
+footer div#footer-content-lists div#footer-list-options li {
+    margin: 10px 0px;
+}
+
+footer div#footer-content-lists div#footer-list-options a {
+    text-decoration: none;
+    color: #888;
+    transition: all .4s ease;
+}
+
+footer div#footer-content-lists div#footer-list-options a:hover {
+    color: #ccc;
+    text-shadow: 0px 0px 2px #cccccc33;
 }
